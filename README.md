@@ -1,5 +1,3 @@
 # compe-561-spring-25
 
-test
-
-new text
+This repo will be used through out the semester to show live demo code.
