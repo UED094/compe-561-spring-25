@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "demo-app"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Ugur Emre Dogan", email = "ue.dogan@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+    "colorama>=0.4.6",
+    "click>=7.1.2",
+    "celery>=5.4.0",
+    "fastapi[all]>=0.115.8",
+]
+
+[project.urls]
+Documentation = "https://github.com/Ugur Emre Dogan/demo-app#readme"
+Issues = "https://github.com/Ugur Emre Dogan/demo-app/issues"
+Source = "https://github.com/Ugur Emre Dogan/demo-app"
+
+[tool.hatch.version]
+path = "src/demo_app/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/demo_app tests}"
+
+[tool.coverage.run]
+source_pkgs = ["demo_app", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/demo_app/__about__.py",
+]
+
+[tool.coverage.paths]
+demo_app = ["src/demo_app", "*/demo-app/src/demo_app"]
+tests = ["tests", "*/demo-app/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

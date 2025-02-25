@@ -1,0 +1,12 @@
+{
+	"books": [
+		{
+			"title": "The Great Gatsby",
+			"author": "F. Scott Fitzgerald"
+		},
+		{
+			"title": "The Catcher in the Rye",
+			"author": "J.D. Salinger"
+		}
+	]
+}
