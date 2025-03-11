@@ -1,0 +1,41 @@
+h1 {
+	background-color: purple;
+	color: white;
+	padding: 20px;
+}
+
+.red {
+	color: red;
+}
+
+#green-header {
+	background-color: green;
+	color: white;
+	padding: 20px;
+}
+
+p {
+	font-size: 10px;
+	color: coral;
+}
+
+div {
+	background-color: coral;
+	color: white;
+	padding: 20px;
+	border: 5px double black;
+	border-radius: 50px;
+}
+
+div p {
+	color: black;
+}
+
+div #blue-text {
+	color: blue;
+}
+
+/* This is just a comment */
+div .center-text {
+	text-align: center;
+}
